@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "visualize-tensor"
+version = "0.3.0"
+description = "🧊 Friendly tensor visualizer for PyTorch beginners — see your tensors, not just their numbers."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.8"
+keywords = ["pytorch", "tensor", "visualization", "deep-learning", "debugging", "beginner"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Visualization",
+]
+dependencies = [
+    "numpy>=1.21",
+    "matplotlib>=3.5",
+]
+
+[project.optional-dependencies]
+torch = ["torch>=1.10"]
+dev   = ["pytest", "black", "ruff", "build", "twine"]
+
+[project.urls]
+Homepage   = "https://github.com/tsejavhaa/visualize-tensor"
+Repository = "https://github.com/tsejavhaa/visualize-tensor"
+Issues     = "https://github.com/tsejavhaa/visualize-tensor/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["visualize_tensor*"]
+
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+line-length = 100
